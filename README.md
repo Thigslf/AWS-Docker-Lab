@@ -119,3 +119,65 @@ O objetivo principal do laboratório é disponibilizar uma interface web via Ngi
 
 <img width="414" height="698" alt="image" src="https://github.com/user-attachments/assets/4cd75e74-a892-4b76-8ade-52a53305e7e3" />
 
+
+
+
+<img width="886" height="999" alt="image" src="https://github.com/user-attachments/assets/eae49f79-e561-48f8-af7e-153cb1538e9c" />
+
+
+->  Agendamento pra restartar o serviço do docker e gravar um log do horário que foi restartado o container
+
+-> Realizei a conexão da SSH via PowerShell e estabeleci a sessão remota com a instância AWS EC2
+
+<img width="886" height="999" alt="image" src="https://github.com/user-attachments/assets/04f18ad2-5638-4b38-bbcb-0e991a50995d" />
+
+-> Abri o editor de texto para criar o script de automação 
+
+<img width="886" height="38" alt="image" src="https://github.com/user-attachments/assets/3f740635-9ede-4ee6-821c-ecd703e67577" />
+
+->  Realizado o script 
+      
+      . Defini o interpretador do script como Bash 
+      . Criei a variavel que aponta para o camninho onde o log será guardado
+      . Entrei no diretorio onde o ficheiro compose.yml da aplicação está localizado
+      . Adicionei uma linha divisória e o timestamp de início ao final do ficheiro de log
+      . Reiniciei o serviço do Docker no sistema e redirecionei todas as saidas para o log
+      . Subi os contêineres em segundo plano (-d) e registrei a saida do log
+      . Registrei a confirmação de sucesso como o horário final do log
+      
+  <img width="886" height="372" alt="image" src="https://github.com/user-attachments/assets/0e997b6b-8403-4418-88c7-91b7219b202d" />
+
+-> Concedi a permissão de execussão ao ficheiro do script
+
+<img width="886" height="39" alt="image" src="https://github.com/user-attachments/assets/051ddae5-8fe8-4abf-a4cf-bb57d3e22d6f" />
+
+-> Abri a tabela de agendamentos para adicionar a regra de automação 
+
+<img width="691" height="41" alt="image" src="https://github.com/user-attachments/assets/05c382fb-462b-4976-8d88-2e844fcc39ce" />
+
+<img width="886" height="621" alt="image" src="https://github.com/user-attachments/assets/d09bbc06-6d8c-4016-bdb1-b14a48a83856" />
+
+-> Executei o script para testar se ele funciona corretamente 
+
+<img width="863" height="41" alt="image" src="https://github.com/user-attachments/assets/22012772-bce4-476b-a6c1-5f338104957c" />
+
+-> Exibi o conteúdo do log para vallidar se o script escreveu as mensagens
+
+<img width="886" height="333" alt="image" src="https://github.com/user-attachments/assets/d1216680-3264-4048-b7ac-d5930232f33b" />
+
+-> Realizei a troca de agendamento 
+
+    . O agendamento estava para ser de 5 em 5 minutos, troquei para que seja uma vez por dia à meia noite
+    . Abri o agendador no terminal 
+    . Alterei a linha que estava com */5 * * * * para 0 0 * * *
+    . Validei que houve a troca de reiniciar de 5 em 5 minutos para uma vez por dia 
+
+  <img width="393" height="30" alt="image" src="https://github.com/user-attachments/assets/df6a6285-93eb-4f67-b788-eca9d8616f7d" />
+
+<img width="886" height="570" alt="image" src="https://github.com/user-attachments/assets/c6c78fde-098e-4f25-8446-6820787b985a" />
+
+<img width="886" height="549" alt="image" src="https://github.com/user-attachments/assets/78f1fba8-482b-4166-8726-f5bbd3272f78" />
+
+
+
+
